@@ -1,0 +1,69 @@
+{
+	"publisher": "AditP",
+	"license": "MIT",
+	"name": "gredu-for-flutter",
+	"displayName": "GREDU for Flutter",
+	"description": "generator for gredu flutter project",
+	"version": "0.0.4",
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:gredu-for-flutter.hello",
+		"onCommand:gredu-for-flutter.add"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "gredu-for-flutter.hello",
+				"title": "GREDU: Show Hello Message"
+			},
+			{
+				"command": "gredu-for-flutter.add",
+				"title": "GREDU: Tambah Fitur Baru"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "gredu-for-flutter.add",
+					"title": "GREDU: Tambah Fitur Baru"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.2.0",
+		"@types/mocha": "^9.1.1",
+		"@types/node": "16.x",
+		"@types/vscode": "^1.67.0",
+		"@vscode/test-electron": "^2.1.3",
+		"eslint": "^8.16.0",
+		"glob": "^8.0.3",
+		"mocha": "^10.0.0",
+		"typescript": "^4.7.2"
+	},
+	"dependencies": {
+		"fs": "^0.0.1-security",
+		"lodash": "^4.17.21",
+		"replace-in-file": "^6.3.5"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/abehbatre/vscode-extension-gredu-for-flutter.git"
+	},
+	"bugs": {
+		"url": "https://github.com/abehbatre/vscode-extension-gredu-for-flutter/issues",
+		"email": "abehbatre@gmail.com"
+	},
+	"icon": "assets/logo.webp"
+}
