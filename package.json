@@ -13,10 +13,17 @@
 	],
 	"activationEvents": [
 		"onCommand:gredu-for-flutter.hello",
-		"onCommand:gredu-for-flutter.add"
+		"onCommand:gredu-for-flutter.add",
+		"onCommand:gredu-for-flutter.repoOnly"
 	],
 	"main": "./extension.js",
 	"contributes": {
+		"snippets": [
+			{
+				"language": "dart",
+				"path": "./snippets/snippets.json"
+			}
+		],
 		"commands": [
 			{
 				"command": "gredu-for-flutter.hello",

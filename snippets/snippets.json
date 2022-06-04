@@ -1,0 +1,151 @@
+{
+    "GREDU Snippet bikin class baru repo": {
+        "prefix": "xrepo",
+        "body": [
+            "import 'package:gredu_revamp/app/core/base/base_repository.dart';",
+            "import 'package:gredu_revamp/app/core/networking/_index.dart';",
+            "",
+            "class $1Repository extends BaseRepository {",
+            "    Future<Outcome> getUserList() {",
+            "      return apiService.httpGet(",
+            "        endPoint: '/users',",
+            "      );",
+            "    }",
+            "   ",
+            "  }"
+        ],
+        "description": "bikin repo"
+    },
+    "GREDU Snippet bikin api baru di repo": {
+        "prefix": "xrepoApi",
+        "body": [
+            "Future<Outcome> get$1() {",
+            "    return apiService.http$2(",
+            "      endPoint: '/$1',",
+            "    );",
+            "}"
+        ],
+        "description": "bikin api baru di repo"
+    },
+    "GREDU Snippet consume api di controller": {
+        "prefix": "xControllerAPI",
+        "body": [
+            "Future<void> $1() async {",
+            "   await repo.$2().then((response) {",
+            "     // on success start here ...",
+            "   }).catchError((error, stackTrace) {",
+            "     FirebaseCrashlytics.instance.recordError(error, stackTrace);",
+            "   });",
+            "}"
+        ],
+        "description": "consume api di controller"
+    },
+    
+    "GREDU Snippet: bikin text": {
+        "prefix": "xt",
+        "body": [
+            "'$1'.text.make(),",
+            ""
+        ],
+        "description": "bikin text"
+    },
+    "GREDU Snippet: bikin text dengan style": {
+        "prefix": "xts",
+        "body": [
+            "'$1'.text.$2.make(),",
+            ""
+        ],
+        "description": "bikin text dengan style"
+    },
+    "GREDU Snippet: bungkus dengan obx": {
+        "prefix": "xo",
+        "body": [
+            "Obx(() => $1),",
+            ""
+        ],
+        "description": "bungkus dengan obx"
+    },
+    "GREDU Snippet: tambah heightBox": {
+        "prefix": "xh",
+        "body": [
+            "heightBox,",
+            ""
+        ],
+        "description": "tambah heightBox"
+    },
+    "GREDU Snippet: tambah widht box": {
+        "prefix": "xw",
+        "body": [
+            "widthBox,",
+            ""
+        ],
+        "description": "tambah widht box"
+    },
+    "GREDU Snippet: bikin VStack": {
+        "prefix": "xvs",
+        "body": [
+            "VStack(",
+            "  [",
+            "    '$1'.text.make(),",
+            "  ],",
+            "),",
+            ""
+        ],
+        "description": "bikin VStack"
+    },
+    "GREDU Snippet: bikin HStack": {
+        "prefix": "xhs",
+        "body": [
+            "HStack(",
+            "  [",
+            "    '$1'.text.make(),",
+            "  ],",
+            "),",
+            ""
+        ],
+        "description": "bikin HStack"
+    },
+    "GREDU Snippet: bikin ExButtonDefault": {
+        "prefix": "xb",
+        "body": [
+            "ExButtonDefault(",
+            "  label: '$1',",
+            "  onPressed: () => controller.$2,",
+            "),",
+            ""
+        ],
+        "description": "bikin ExButtonDefault"
+    },
+    "GREDU Snippet: bikin ExButtonOutline": {
+        "prefix": "xbo",
+        "body": [
+            "ExButtonOutline(",
+            "  label: '$1',",
+            "  onPressed: () => controller.$2,",
+            "),",
+            ""
+        ],
+        "description": "bikin ExButtonOutline"
+    },
+    "GREDU Snippet: bikin ExAvatar": {
+        "prefix": "xava",
+        "body": [
+          "ExAvatarView(",
+          "   url: '$1',",
+          "   userFullName: '$2',",
+          "),",
+          ""
+        ],
+        "description": "bikin ExAvatar"
+    },
+    "GREDU Snippet: bikin ExTextFieldNormal": {
+        "prefix": "xtf",
+        "body": [
+          "ExTextFieldNormal(",
+          "   tfController: controller.tfExample,",
+          "   hint: 'Example',",
+          "),"
+        ],
+        "description": "bikin ExTextFieldNormal"
+    }
+}
